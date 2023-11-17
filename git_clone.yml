@@ -1,0 +1,11 @@
+---
+- hosts: all
+  user: root
+  become: yes
+  tasks:
+    - name: clone a github repository
+      git:
+        repo: https://github.com/charan536/live01.git
+        dest: /root/repos
+        clone: yes
+        update: yes
